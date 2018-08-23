@@ -1,0 +1,32 @@
+{
+"manifest_version": 2,
+"name": "Index Locator",
+"description": "Index Locator",
+"version": "2.1",
+"devtools_page": "devtools.html",
+"background": {
+        "scripts": ["background.js"]
+},
+"icons": {
+"128": "128.png"
+},
+"permissions": [
+"contextMenus",
+"unlimitedStorage",
+"notifications"
+],
+"content_scripts": [
+        {
+            "all_frames": true,
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "style.css"
+            ]
+        }
+    ]
+}
